@@ -44,3 +44,9 @@ Jonhyy - jonhash1@yandex.ru
 
 
 ## Acknowledgments
+
+Use this resources to find out more:
+
+[Serializers](https://www.django-rest-framework.org/api-guide/serializers/#serializers)
+
+[[Nested relationships](https://www.django-rest-framework.org/api-guide/relations/#nested-relationships)](https://www.django-rest-framework.org/api-guide/relations/#nested-relationships)
