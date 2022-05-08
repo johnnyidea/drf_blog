@@ -47,6 +47,12 @@ Jonhyy - jonhash1@yandex.ru
 
 Use this resources to find out more:
 
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
 [Serializers](https://www.django-rest-framework.org/api-guide/serializers/#serializers)
 
 [[Nested relationships](https://www.django-rest-framework.org/api-guide/relations/#nested-relationships)](https://www.django-rest-framework.org/api-guide/relations/#nested-relationships)
+
+[ ViewSets ]: https://www.django-rest-framework.org/api-guide/viewsets/
+
