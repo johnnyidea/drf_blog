@@ -1,8 +1,8 @@
 from rest_framework import serializers
 from .models import Post
-from taggit_serializer.serializers import TagListSerializerField, TaggitSerializer
+from taggit_serializer.serializers import (TagListSerializerField,
+                                           TaggitSerializer)
 from django.contrib.auth.models import User
-
 
 class PostSerializer(TaggitSerializer, serializers.ModelSerializer):
 
