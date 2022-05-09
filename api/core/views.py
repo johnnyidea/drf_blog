@@ -1,6 +1,6 @@
 from rest_framework import viewsets
 from .serializers import PostSerializer
-from .models import Post
+from .models import Post, Comment
 from rest_framework.response import Response
 from rest_framework import permissions
 from rest_framework import pagination
@@ -12,7 +12,7 @@ from taggit.models import Tag
 from rest_framework.views import APIView
 from django.core.mail import send_mail
 from rest_framework import filters
-from .serializers import RegisterSerializer, UserSerializer
+from .serializers import RegisterSerializer, UserSerializer, CommentSerializer
 
 
 class FeedBackView(APIView):
@@ -88,3 +88,12 @@ class ProfileView(generics.GenericAPIView):
             "user": UserSerializer(request.user, context=self.get_serializer_context()).data,
         })
 
+class CommentView(generics.ListCreateAPIView):
+    queryset = Comment.objects.all()
+    serializer_class = CommentSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get_queryset(self):
+        post_slug = self.kwargs['post_slug'].lower()
+        post = Post.objects.get(slug=post_slug)
+        return Comment.objects.filter(post=post)
